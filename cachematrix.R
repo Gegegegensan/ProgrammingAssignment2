@@ -1,7 +1,7 @@
 ## Assignment: Caching the Inverse of a Matrix
 
-## This function creates getters of the matrix and inverse matrix and 
-## setters of the matrix and inverse matrix that are accessible from outside of the function
+## This function creates getters of the matrix and inverse of matrix and 
+## setters of the matrix and inverse of matrix that are accessible from outside of the function
 ## The inverse is returned from from the cache after running cacheSolve() function
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function calculates inverse matrix and set the calculated value onto makeCacheMatrix() function
+## This function calculates the inverse of matrix and set the calculated value onto makeCacheMatrix() function
 
 
 cacheSolve <- function(x, ...) {
@@ -43,13 +43,13 @@ cacheSolve <- function(x, ...) {
 ## TEST 1
 test_matrix1 <- makeCacheMatrix(matrix(1001:1004, 2, 2))
 test_matrix1$get()
-test_matrix1$getinversematrix() ## should be NULL
+test_matrix1$getinversematrix() ## Should be NULL
 cacheSolve(test_matrix1)
-test_matrix1$getinversematrix() ## Should return inverse matrix
+test_matrix1$getinversematrix() ## Should return the inverse of matrix
 
 #TEST 2
 test_matrix2 <- makeCacheMatrix(matrix(c(500, 4000, 456, 555), 2, 2))
 test_matrix2$get()
-test_matrix2$getinversematrix()
+test_matrix2$getinversematrix() ## Should be NULL
 cacheSolve(test_matrix2)
-test_matrix2$getinversematrix()
+test_matrix2$getinversematrix() ## Should return the inverse of matrix
